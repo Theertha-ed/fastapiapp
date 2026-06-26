@@ -1,3 +1,2 @@
 # fastapiapp
-
 ## creating fastapi  application
