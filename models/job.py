@@ -1,6 +1,6 @@
-from sqlalchemy import Column,Interger,String,Enum,ForeignKey,relationship
-from models.company import Company
+from sqlalchemy import Column,Interger,String,Enum,ForeignKey
 from database import Base,engine,SessionLocal
+from sqlalchemy .orm import relationship 
 
 
 class Job(Base):
@@ -12,5 +12,6 @@ class Job(Base):
     salary=Column(Integer)
     company_id= Column(Integer,ForeignKey("companies.id"))
     company=relationship("Company",back_populates="jobs")
+    
     
    

@@ -10,3 +10,4 @@ class Company(Base):
     email=Column(String,unique=True)
     phone=Column(String,unique=True)
     jobs=relationship("Job",back_populates="company")
+    
