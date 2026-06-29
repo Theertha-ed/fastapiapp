@@ -6,6 +6,7 @@ from models import job as job_model,company as company_model
 
 app = FastAPI()
 print(engine)
+# Base.metadata.create_all(bind=engine)
 
 Base.metadata.create_all(bind=engine)
 
