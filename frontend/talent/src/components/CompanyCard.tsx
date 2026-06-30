@@ -18,7 +18,7 @@ function CompanyCard() {
        {companies.map((company) => (
         <div key={company.id}>
           <h1>{company.name}</h1>
-          <p>{company.email}</p>
+           <p>{company.address}</p>
           <p>{company.phone}</p>
           <p>{company.location}</p>
           <hr></hr>
