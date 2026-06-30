@@ -1,21 +1,18 @@
 import { useState } from "react";
 
-function Counter() {
-    const [count, setCount] = useState(0);
+function Welcome() {
+  const [name, setName] = useState("");
 
-    const increment = () => {
-        setCount(count + 1);
-    };
-
-    return (
-        <div>
-            <h1>Count: {count}</h1>
-
-            <button onClick={increment}>
-                Increment
-            </button>
-        </div>
-    );
+  return (
+    <div>
+      <h1>Welcome {name || "guest"}</h1>
+      <input
+        value={name}
+        onChange={(event) => setName(event.target.value)}
+        placeholder="Enter your name"
+      />
+    </div>
+  );
 }
 
-export default Counter;
+export default Welcome;
